@@ -21,7 +21,7 @@ export default function PortfolioHeader({ name, role, email, avatarSrc }: Props)
       <div className="flex-1">
         <h1 className="text-2xl font-semibold">{name}</h1>
         {role && <p className="text-sm text-gray-600">{role}</p>}
-        {email && <p className="text-sm mt-2 text-gray-700">📧 <a href={`mailto:${email}`} className="underline">{email}</a></p>}
+  {email && <p className="text-sm mt-2 text-gray-700"><a href={`mailto:${email}`} className="underline">{email}</a></p>}
       </div>
     </header>
   );

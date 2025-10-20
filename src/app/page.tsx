@@ -1,5 +1,7 @@
 import PortfolioHeader from '../components/PortfolioHeader';
 import GitHubGrid from '../components/GitHubGrid';
+// GuestbookForm is a client component; import it directly so Next handles it as a client boundary
+import GuestbookForm from '../components/GuestbookForm';
 import { getGitHubRepos } from '../lib/github';
 import { Project } from '../data/projects';
 
@@ -26,7 +28,7 @@ export default async function Home() {
       <div className="max-w-4xl mx-auto">
         <PortfolioHeader name={name} role={role} email={email} />
 
-        <main className="mt-8 grid gap-6">
+  <main className="mt-8 grid gap-6">
           <section className="card p-6">
             
             <div className="flex flex-wrap gap-4 mt-3">
@@ -49,8 +51,9 @@ export default async function Home() {
             <GitHubGrid projects={projects} />
           </section>
 
-          <section className="text-center text-sm text-gray-600 mt-6">
-            <p>이 페이지는 Next.js로 제작되었습니다. 더 궁금한 점이 있으면 오른쪽 상단의 이메일로 연락 주세요.</p>
+          <section className="card p-6">
+            <h2 className="text-xl font-semibold mb-4">방명록</h2>
+            <GuestbookForm />
           </section>
         </main>
       </div>

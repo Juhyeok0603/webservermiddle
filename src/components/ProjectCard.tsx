@@ -18,14 +18,14 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <h3 className="font-semibold text-lg mb-1 flex items-center gap-2">
-              <a href={project.link} className="hover:underline accent">{project.title}</a>
+              <a href={project.link} className="hover:underline text-black">{project.title}</a>
             </h3>
             {project.description && <p className="text-sm text-gray-700 mb-2">{project.description}</p>}
             {project.tech && <p className="text-xs text-gray-500">{project.tech.join(' · ')}</p>}
           </div>
           <div className="flex-shrink-0 ml-3">
             <a href={project.link} aria-label={`Open ${project.title} on GitHub`} className="text-gray-700 hover:text-black">
-              <GitHubIcon className="w-6 h-6 accent" />
+              <GitHubIcon className="w-6 h-6 text-black" />
             </a>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         )}
       </div>
       <div className="flex-1">
-        <h3 className="font-semibold text-lg mb-1">{project.title}</h3>
+        <h3 className="font-semibold text-lg mb-1 text-black">{project.title}</h3>
         <p className="text-sm text-gray-700 mb-2">{project.description}</p>
         {project.tech && (
           <p className="text-xs text-gray-500">{project.tech.join(' · ')}</p>
