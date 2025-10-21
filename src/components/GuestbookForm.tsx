@@ -64,12 +64,12 @@ export default function GuestbookForm() {
         </div>
 
         <div>
-          <label htmlFor="message">메시지</label>
+          <label htmlFor="message">방명록</label>
           <textarea
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="메시지를 남겨주세요"
+            placeholder="방명록을 남겨주세요"
             className="textarea"
             rows={4}
           />
